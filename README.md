@@ -7,12 +7,10 @@
 
 ## Authors
 
-[<img src="https://avatars2.githubusercontent.com/u/12503997?v=4" width="75px;"/>](https://github.com/emersonjds) |
-| [<img src="https://avatars1.githubusercontent.com/u/9807867?v=4" width="75px;"/>](https://github.com/jairoiglesias)
+[<img src="https://avatars2.githubusercontent.com/u/12503997?v=4" width="75px;"/>](https://github.com/emersonjds)
+[<img src="https://avatars1.githubusercontent.com/u/9807867?v=4" width="75px;"/>](https://github.com/jairoiglesias)
 
-| [Emerson Silva](https://github.com/emersonjds)
-
-| [Jairo Iglesias](https://github.com/jairoiglesias)
+[Emerson Silva](https://github.com/emersonjds) - [Jairo Iglesias](https://github.com/jairoiglesias)
 
 ## Techs
 
