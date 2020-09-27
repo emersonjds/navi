@@ -1,6 +1,6 @@
 ## Na'vi Platform
 
-<p align="center"> Brasil Hack Export
+<p align="center"> Brasil Hack Export - projeto disponivel em https://na-vi.netlify.app/
 </p>
 
 <hr>
