@@ -1,6 +1,13 @@
 import React from "react";
 import "./App.css";
-import { Row, Col } from "reactstrap";
+import {
+  Row,
+  Col,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+  Input,
+} from "reactstrap";
 
 import Map from "./components/Map";
 import Chart from "./components/Chart";
@@ -16,7 +23,7 @@ function App() {
 
         <div
           style={{
-            height: "75%",
+            height: "auto",
             width: "60vw",
             position: "absolute",
             backgroundColor: "white",
@@ -34,14 +41,68 @@ function App() {
             width: 500,
             position: "absolute",
             backgroundColor: "white",
-            opacity: 0.5,
+
             zIndex: 3,
             marginTop: 100,
             right: 20,
           }}
         >
-          <p>Lama</p>
-          <p>Barco</p>
+          <br />
+          <h3>Rotas - 27/09/20 </h3>
+          <Row>
+            <Col style={{ padding: 40 }}>
+              <InputGroup>
+                <Input
+                  style={{ marginTop: 6, marginRight: 10 }}
+                  addon
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                />
+                <p>Rota Santarem - Calado 12</p>
+              </InputGroup>
+              <br />
+              <InputGroup>
+                <Input
+                  style={{ marginTop: 6, marginRight: 10 }}
+                  addon
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                />
+                <p>Rota Santarem - Calado 12</p>
+              </InputGroup>
+              <br />
+              <InputGroup>
+                <Input
+                  style={{ marginTop: 6, marginRight: 10 }}
+                  addon
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                />
+                <p>Rota Santarem - Calado 12</p>
+              </InputGroup>
+              <br />
+              <InputGroup>
+                <Input
+                  style={{ marginTop: 6, marginRight: 10 }}
+                  addon
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                />
+                <p>Rota Santarem - Calado 12</p>
+              </InputGroup>
+              <br />
+              <InputGroup>
+                <Input
+                  style={{ marginTop: 6, marginRight: 10 }}
+                  addon
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                />
+                <p>Rota Santarem - Calado 12</p>
+              </InputGroup>
+              <br />
+            </Col>
+          </Row>
         </div>
         {/* <Col md={4}>
           <Form>

@@ -20,6 +20,7 @@ import {
 } from "recharts";
 import { scalePow, scaleLog } from "d3-scale";
 import { changeNumberOfData } from "./utils";
+import CustomLineDot from "./CustomLineDot";
 
 function Hello() {
   return <div>Hello</div>;
@@ -181,6 +182,37 @@ export default class Chart extends Component {
             {series.map((s) => (
               <Line dataKey="value" data={s.data} name={s.name} key={s.name} />
             ))}
+          </LineChart>
+          <br />
+        </div>
+
+        <div className="line-chart-wrapper">
+          <LineChart
+            width={900}
+            height={400}
+            data={data}
+            margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
+            syncId="test"
+          >
+            <CartesianGrid
+              stroke="#f5f5f5"
+              verticalFill={["rgba(0, 0, 0, 0.2)", "rgba(255, 255, 255, 0.3)"]}
+              horizontalFill={["#ccc", "#fff"]}
+            />
+            <Legend />
+            <XAxis dataKey="name" axisLine={{ stroke: "red" }} />
+            <YAxis
+              scale={scale}
+              domain={[0.01, "auto"]}
+              ticks={[0.01, 0.1, 1, 10, 100, 1000]}
+            />
+            <Tooltip />
+            <Line
+              type="monotone"
+              dataKey="uv"
+              dot={<CustomLineDot />}
+              stroke="#ff7300"
+            />
           </LineChart>
         </div>
       </div>
