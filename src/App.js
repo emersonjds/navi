@@ -1,15 +1,6 @@
 import React from "react";
 import "./App.css";
-import {
-  Row,
-  Col,
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText,
-} from "reactstrap";
+import { Row, Col } from "reactstrap";
 
 import Map from "./components/Map";
 import Chart from "./components/Chart";
