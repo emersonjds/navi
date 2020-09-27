@@ -23,7 +23,7 @@ function App() {
 
         <div
           style={{
-            height: "75%",
+            height: "auto",
             width: "60vw",
             position: "absolute",
             backgroundColor: "white",
