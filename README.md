@@ -16,11 +16,8 @@
 
 - [x] React JS
 - [x] React Strap
-- [x] Axios
-- [x] uuidv4
-- [x] React elastic carousel
-- [x] Styled Components
-- [x] CSS4
+- [x] google-map-react
+- [x] recharts
 - [x] Netlify
 
 ## Usage
