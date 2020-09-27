@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 import "./App.css";
 import {
   Row,
@@ -10,9 +10,24 @@ import {
 } from "reactstrap";
 
 import Map from "./components/Map";
-import Chart from "./components/Chart";
+import Chart1 from "./components/Chart";
+import Chart2 from "./components/Chart";
+import Chart3 from "./components/Chart";
+import Chart4 from "./components/Chart";
+import Chart5 from "./components/Chart";
 
 function App() {
+
+  const [currentRoute, setRoute] = useState()
+
+  const handleRouteSelect = (e) => {
+    const {id} = e.target
+    
+    setRoute(id)
+
+    // console.log(currentRoute)
+  }
+
   return (
     <div className="App">
       <h1>Na'vi - Painel Oceanografico Brasileiro</h1>
@@ -32,7 +47,12 @@ function App() {
             left: 50,
           }}
         >
-          <Chart />
+          {currentRoute==1 && <Chart1 />}
+          {currentRoute==2 && <Chart2 />}
+          {currentRoute==3 && <Chart3 />}
+          {currentRoute==4 && <Chart4/>}
+          {currentRoute==5 && <Chart5 />}
+          
         </div>
 
         <div
@@ -53,50 +73,65 @@ function App() {
             <Col style={{ padding: 40 }}>
               <InputGroup>
                 <Input
+                  id="1"
                   style={{ marginTop: 6, marginRight: 10 }}
                   addon
-                  type="checkbox"
+                  type="radio"
                   aria-label="Checkbox for following text input"
+                  name="route"
+                  onChange={handleRouteSelect}
+                />
+                <p>Rota Santarem - Calado 12</p>
+              </InputGroup>
+              <br />
+              <InputGroup >
+                <Input
+                  id="2"
+                  style={{ marginTop: 6, marginRight: 10 }}
+                  addon
+                  type="radio"
+                  aria-label="Checkbox for following text input"
+                  name="route"
+                  onChange={handleRouteSelect}
                 />
                 <p>Rota Santarem - Calado 12</p>
               </InputGroup>
               <br />
               <InputGroup>
                 <Input
+                  id="3"
                   style={{ marginTop: 6, marginRight: 10 }}
                   addon
-                  type="checkbox"
+                  type="radio"
                   aria-label="Checkbox for following text input"
+                  name="route"
+                  onChange={handleRouteSelect}
                 />
                 <p>Rota Santarem - Calado 12</p>
               </InputGroup>
               <br />
               <InputGroup>
                 <Input
+                  id="4"
                   style={{ marginTop: 6, marginRight: 10 }}
                   addon
-                  type="checkbox"
+                  type="radio"
                   aria-label="Checkbox for following text input"
+                  name="route"
+                  onChange={handleRouteSelect}
                 />
                 <p>Rota Santarem - Calado 12</p>
               </InputGroup>
               <br />
               <InputGroup>
                 <Input
+                  id="5"
                   style={{ marginTop: 6, marginRight: 10 }}
                   addon
-                  type="checkbox"
+                  type="radio"
                   aria-label="Checkbox for following text input"
-                />
-                <p>Rota Santarem - Calado 12</p>
-              </InputGroup>
-              <br />
-              <InputGroup>
-                <Input
-                  style={{ marginTop: 6, marginRight: 10 }}
-                  addon
-                  type="checkbox"
-                  aria-label="Checkbox for following text input"
+                  name="route"
+                  onChange={handleRouteSelect}
                 />
                 <p>Rota Santarem - Calado 12</p>
               </InputGroup>
