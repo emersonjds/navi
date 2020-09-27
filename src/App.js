@@ -21,6 +21,7 @@ import {
   CardBody,
 } from "reactstrap";
 import classnames from "classnames";
+import barco from "./assets/cargueiro.jpg";
 
 import Map from "./components/Map";
 import Chart1 from "./components/Chart";
@@ -137,6 +138,12 @@ function App() {
                 </TabPane>
                 <TabPane tabId="2">
                   <Row>
+                    <Col md={12}>
+                      <div style={{ marginTop: 20, marginBottom: 20 }}>
+                        <h5> Grand Hamburgo </h5>
+                        <img src={barco} height="220" width="350" />
+                      </div>
+                    </Col>
                     <Col sm="6">
                       <Card body>
                         <CardTitle>CALCULO TRIM</CardTitle>
@@ -156,7 +163,7 @@ function App() {
                         style={{
                           width: "100%",
                           marginTop: 40,
-                          backgroundColor: "orange",
+                          backgroundColor: "#161e65",
                         }}
                       >
                         EFETUAR CALCULO
