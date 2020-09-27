@@ -21,6 +21,16 @@ import {
 import { scalePow, scaleLog } from "d3-scale";
 import { changeNumberOfData } from "./utils";
 import CustomLineDot from "./CustomLineDot";
+import {
+  Button,
+  Form,
+  FormGroup,
+  Input,
+  FormText,
+  InputGroup,
+  Col,
+  Row,
+} from "reactstrap";
 
 function Hello() {
   return <div>Hello</div>;
@@ -63,27 +73,43 @@ const data02 = [
 
 const series = [
   {
-    name: "Series 1",
+    name: "CMR",
     data: [
-      { category: "A", value: Math.random() },
-      { category: "B", value: Math.random() },
-      { category: "C", value: Math.random() },
+      { category: "00", value: 11 },
+      { category: "01", value: 11 },
+      { category: "02", value: 11.5 },
+      { category: "03", value: 12 },
+      { category: "04", value: 12.5 },
+      { category: "05", value: 13 },
+      { category: "06", value: 13.5 },
+      { category: "07", value: 13 },
+      { category: "08", value: 12.5 },
+      { category: "09", value: 12 },
+      { category: "10", value: 11.5 },
+      { category: "11", value: 11 },
+      { category: "12", value: 11 },
+      { category: "13", value: 11.5 },
+      { category: "14", value: 12 },
+      { category: "15", value: 12.5 },
+      { category: "16", value: 13 },
+      { category: "17", value: 13.5 },
+      { category: "18", value: 13 },
+      { category: "19", value: 12.5 },
+      { category: "20", value: 12 },
+      { category: "21", value: 11.5 },
+      { category: "22", value: 11 },
+      { category: "23", value: 11.5 },
     ],
   },
+];
+
+const series1 = [
   {
-    name: "Series 2",
+    name: "MELHOR JANELA",
     data: [
-      { category: "B", value: Math.random() },
-      { category: "C", value: Math.random() },
-      { category: "D", value: Math.random() },
-    ],
-  },
-  {
-    name: "Series 3",
-    data: [
-      { category: "C", value: Math.random() },
-      { category: "D", value: Math.random() },
-      { category: "E", value: Math.random() },
+      { category: "05", value: 13 },
+      { category: "06", value: 13.5 },
+      { category: "07", value: 13 },
     ],
   },
 ];
@@ -167,7 +193,7 @@ export default class Chart extends Component {
       <div className="line-charts">
         <br />
 
-        <p>LineChart repeats categories on x axis</p>
+        <p>Analise de Maré e Calado</p>
         <div className="line-chart-wrapper">
           <LineChart width={900} height={300}>
             <XAxis
@@ -184,36 +210,55 @@ export default class Chart extends Component {
             ))}
           </LineChart>
           <br />
-        </div>
-
-        <div className="line-chart-wrapper">
-          <LineChart
-            width={900}
-            height={400}
-            data={data}
-            margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
-            syncId="test"
-          >
-            <CartesianGrid
-              stroke="#f5f5f5"
-              verticalFill={["rgba(0, 0, 0, 0.2)", "rgba(255, 255, 255, 0.3)"]}
-              horizontalFill={["#ccc", "#fff"]}
-            />
-            <Legend />
-            <XAxis dataKey="name" axisLine={{ stroke: "red" }} />
-            <YAxis
-              scale={scale}
-              domain={[0.01, "auto"]}
-              ticks={[0.01, 0.1, 1, 10, 100, 1000]}
-            />
-            <Tooltip />
-            <Line
-              type="monotone"
-              dataKey="uv"
-              dot={<CustomLineDot />}
-              stroke="#ff7300"
-            />
-          </LineChart>
+          <Row>
+            <Col md={9}>
+              <LineChart width={700} height={300}>
+                <XAxis
+                  dataKey="category"
+                  type="category"
+                  allowDuplicatedCategory={false}
+                />
+                <YAxis dataKey="value" />
+                <CartesianGrid strokeDasharray="3 3" />
+                <Tooltip />
+                <Legend />
+                {series1.map((s) => (
+                  <Line
+                    dataKey="value"
+                    data={s.data}
+                    name={s.name}
+                    key={s.name}
+                  />
+                ))}
+              </LineChart>
+            </Col>
+            <Col md={3}>
+              <InputGroup key={data.id}>
+                <Input
+                  id="1"
+                  style={{ marginTop: 6, marginRight: 10 }}
+                  addon
+                  type="radio"
+                  aria-label="Checkbox for following text input"
+                  name="route"
+                />
+                <p>Periodo 05 - 07</p>
+                <br />
+              </InputGroup>
+              <InputGroup key={data.id}>
+                <Input
+                  id="1"
+                  style={{ marginTop: 6, marginRight: 10 }}
+                  addon
+                  type="radio"
+                  aria-label="Checkbox for following text input"
+                  name="route"
+                />
+                <p>Periodo 16 - 19</p>
+                <br />
+              </InputGroup>
+            </Col>
+          </Row>
         </div>
       </div>
     );
