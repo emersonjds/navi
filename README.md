@@ -1,25 +1,40 @@
-README.md
-Spectrum Platform
-Brasil Hack Export
+## Na'vi Platform
 
-Autor
+<p align="center"> Brasil Hack Export
+</p>
 
-| Emerson Silva
-| Jairo Iglesias
+<hr>
 
-Techs
-React JS
-React Strap
-Axios
-uuidv4
-React elastic carousel
-Styled Components
-CSS4
-Netlify
+## Authors
 
-Usage
-Run yarn for install dependencies.
-Run yarn dev and access http://localhost:3000.
+| [<img src="https://avatars2.githubusercontent.com/u/12503997?v=4" width="75px;"/>](https://github.com/emersonjds) |
+| :---------------------------------------------------------------------------------------------------------------: |
 
-License
-GPL-3.0 © Emerson Silva
+
+| [Emerson Silva](https://github.com/emersonjds)
+
+| [<img src="https://avatars1.githubusercontent.com/u/9807867?v=4" width="75px;"/>](https://github.com/jairoiglesias) |
+| :-----------------------------------------------------------------------------------------------------------------: |
+
+
+| [Jairo Iglesias](https://github.com/jairoiglesias)
+
+## Techs
+
+- [x] React JS
+- [x] React Strap
+- [x] Axios
+- [x] uuidv4
+- [x] React elastic carousel
+- [x] Styled Components
+- [x] CSS4
+- [x] Netlify
+
+## Usage
+
+1. Run `yarn` for install dependencies.<br />
+2. Run `yarn dev` and access `http://localhost:3000`.<br />
+
+## License
+
+[GPL-3.0](emersonjds@fsf.com) © Emerson Silva
